@@ -51,8 +51,8 @@ class Stack
 end
 
 stack_ext = Stack.new("stackoverflow", 15)
-# stack_ext.user
-stack_ext.tags
+
+stack_ext.questions
 
 
 
