@@ -13,9 +13,7 @@ class Stack
 
   def user
     obj = self.class.get("/2.2/users/#{@id}", @options)
-    obj = obj['items']
-    name = obj[0]
-    name = name['display_name']
+    name = obj['items'][0]['display_name']
     puts name
   end
 
@@ -50,9 +48,9 @@ class Stack
 
 end
 
-stack_ext = Stack.new("stackoverflow", 15)
+stack_ext = Stack.new("stackoverflow", 1)
 
-stack_ext.questions
+stack_ext.user
 
 
 
